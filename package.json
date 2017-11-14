@@ -53,14 +53,18 @@
     ]
   },
   "dependencies": {
-    "@deskpro/apps-sdk-react": "^0.1.6",
+    "@deskpro/apps-sdk-react": "^0.1.9",
     "@deskpro/react-components": "^1.1.2",
     "handlebars": "^4.0.11",
+    "react-redux": "^5.0.6",
+    "redux": "^3.7.2",
+    "redux-form": "^7.1.2",
+    "redux-thunk": "^2.2.0",
     "taboverride": "^4.0.3"
   },
   "devDependencies": {
     "@deskpro/apps-dpat": "^0.9.1",
-    "@deskpro/apps-sdk-core": "^1.0.0-beta.22",
+    "@deskpro/apps-sdk-core": "^1.0.0-beta.25",
     "babel-eslint": "^8.0.2",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
