@@ -4,4 +4,12 @@ node_js:
 install:
   - npm install --no-optional && npm install @deskpro/apps-dpat@0.9.1
 script:
- - npm run test && npm run package
+  - npm run package
+deploy:
+  provider: releases
+  api_key:
+    secure: HjHdzHlj4W8bT0rpWlux5etA9t1wD/KstUWu+fziO/jxtMKDdjqkjuwZ7BTec+hCCptvNQqqxiyFWtkfViALEkJJ+QCeq5RlXdaXs+HJc3JD2DMNZmTIsWzWzGLDoA3gLjeEglWz0wl1pIovwSwWuY+ONwWu0TzmDouQkYR8MLtrlWJ5AW6tOow+9iA+js/UTl7wqpOOe7XjRSng0hwMCvWs0ir18R4FGLl7QvDIG+4A9dD9aeAeS+pMfXPmuy4C01w/ir8J8sy2pTeXY0KTlsIL6dVOp7x45Ro9YFMoeFbZf6VqyFBNSfTe2SIU0ELggCenP2s0lP3LiNV+jTDJHYD8RlunzO2LIGAH33VpuiVBDSzYamByokU0GqDzaFrF6KdCoWhapEzXblF5BF5ScmoivgrBOCO7POT1jVIp3Mi6HeNguswnIJmPWBHRuc3baZzr+2mLXH8nYuH2VqNvX5G2zznDJKgnFI0gZ3DM5UqfDZkH3pMs41OMlUJh0YQRZi64l82y99cmlp0iwqYYsLMvrXgFWlHb8OASwnGYC4KeENLHTz4dWb5gACZxrc14n85F0VKVbJPExMpFj6E29hwv63tJ4/FjMWkf3ybKkwJibUFjVmMjoQIn3Ve0097/RGKQzQraH7ILpUuixHm95fB2lfweZMwVkeNmPik/Eko=
+  file: dist/app.zip
+  skip_cleanup: true
+  on:
+    tags: true
