@@ -1,5 +1,7 @@
-# JON Web Service
+# JON Service
 Renders the response values from a JSON web service using a custom template.
+
+[![Build Status](https://travis-ci.org/DeskproApps/json-service.svg?branch=master)](https://travis-ci.org/DeskproApps/json-service)
 
 ## Contents
 - [Installation](#installation)
