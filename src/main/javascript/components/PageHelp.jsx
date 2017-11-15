@@ -34,7 +34,8 @@ const PageHelp = () => (
       <p>
         The JSON response is displayed using an admin created
         template. <a href="http://handlebarsjs.com/expressions.html" target="_blank">Handlebars expressions</a> may
-        be used to render the JSON and <i>tab meta</i> values.
+        be used to render the JSON
+        and <a href="https://deskpro.gitbooks.io/deskpro-apps/apps/tabdata.html" target="_blank">tab meta values</a>.
       </p>
       <pre>
         <code>

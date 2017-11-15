@@ -10,6 +10,11 @@ import { Container, Loader } from '@deskpro/react-components';
 class PageHome extends React.PureComponent {
   static propTypes = {
     /**
+     * Instance of sdk-core
+     */
+    dpapp: PropTypes.object.isRequired,
+
+    /**
      * Instance of sdk storage.
      * @see https://deskpro.gitbooks.io/deskpro-apps/api/props/storage.html
      */
