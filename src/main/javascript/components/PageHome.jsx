@@ -50,9 +50,9 @@ class PageHome extends React.PureComponent {
    * Invoked immediately after a component is mounted
    */
   componentDidMount() {
-    const { dpapp, storage, ui, tabData } = this.props;
+    const { dpapp, storage, route, ui, tabData } = this.props;
 
-    if (storage.app.settings.serviceURL) {
+    if (storage.app.settings && storage.app.settings.serviceURL) {
       const serviceTemp = Handlebars.compile(storage.app.settings.serviceURL);
       const serviceURL = serviceTemp(tabData);
       const fetchParams = {
@@ -69,6 +69,7 @@ class PageHome extends React.PureComponent {
         .catch(ui.error);
     } else {
       this.setState({ loaded: true }); // eslint-disable-line
+      route.to('settings');
     }
   }
 
