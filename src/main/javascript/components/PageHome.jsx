@@ -57,15 +57,12 @@ class PageHome extends React.PureComponent {
       const serviceURL = serviceTemp(tabData);
       const fetchParams = {
         method: 'GET',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json'
-        }
+        headers: {}
       };
 
       dpapp.restApi.fetchCORS(serviceURL, fetchParams)
         .then((resp) => {
-          const context = Object.assign({}, resp.body, { tab: tabData });
+          const context = Object.assign({}, resp.body, { resp: resp.body, tab: tabData });
           const htmlTemp = Handlebars.compile(storage.app.settings.template);
           return this.setState({ loaded: true, html: htmlTemp(context) });
         })
