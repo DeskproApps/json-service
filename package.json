@@ -1,6 +1,6 @@
 {
   "name": "@deskproapps/json-service",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Renders the response values from a JSON web service using a custom template.",
   "main": "lib/main/javascript/index.js",
   "scripts": {
@@ -53,7 +53,6 @@
     ]
   },
   "dependencies": {
-    "@deskpro/apps-sdk-react": "^0.2.2",
     "@deskpro/react-components": "^1.1.2",
     "handlebars": "^4.0.11",
     "react-redux": "^5.0.6",
@@ -65,6 +64,7 @@
   "devDependencies": {
     "@deskpro/apps-dpat": "^0.9.6",
     "@deskpro/apps-sdk-core": "^1.0.0-beta.26",
+    "@deskpro/apps-sdk-react": "0.2.4",
     "babel-eslint": "^8.0.2",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^16.1.0",
