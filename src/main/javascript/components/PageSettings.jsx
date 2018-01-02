@@ -57,6 +57,8 @@ class PageSettings extends React.PureComponent {
         <Heading size={2}>Settings</Heading>
         <Form
           name="settings"
+          keepDirtyOnReinitialize
+          destroyOnUnmount={false}
           initialValues={storage.app.settings}
           onSubmit={storage.onSubmitApp(this.handleSubmit)}
         >
