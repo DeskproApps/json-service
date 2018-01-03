@@ -1,6 +1,6 @@
 {
   "name": "@deskproapps/json-service",
-  "version": "0.0.9",
+  "version": "0.0.10",
   "description": "Renders the response values from a JSON web service using a custom template.",
   "main": "lib/main/javascript/index.js",
   "scripts": {
