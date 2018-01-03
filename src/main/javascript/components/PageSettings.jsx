@@ -42,7 +42,8 @@ class PageSettings extends React.PureComponent {
   /**
    * Called when the form is submitted
    */
-  handleSubmit = () => {
+  handleSubmit = (values) => {
+    document.querySelector('.deskpro-toolbar__title').innerHTML = values.title;
     this.props.route.to('home');
   };
 
@@ -51,6 +52,13 @@ class PageSettings extends React.PureComponent {
    */
   render() {
     const { storage } = this.props;
+
+    if (storage.app.settings === undefined) {
+      storage.app.settings = {};
+    }
+    if (!storage.app.settings.title) {
+      storage.app.settings.title = dpapp.manifest.title;
+    }
 
     return (
       <Container>
@@ -62,6 +70,11 @@ class PageSettings extends React.PureComponent {
           initialValues={storage.app.settings}
           onSubmit={storage.onSubmitApp(this.handleSubmit)}
         >
+          <Input
+            label="Title"
+            id="title"
+            name="title"
+          />
           <Input
             label="Service URL"
             id="serviceURL"
