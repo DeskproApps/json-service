@@ -2,8 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import tabOverride from 'taboverride';
 import { sdkConnect, LinkButton } from '@deskpro/apps-sdk-react';
-import { Container, Heading } from '@deskpro/react-components';
-import { Form, Input, Textarea, Button } from '@deskpro/react-components/lib/bindings/redux-form';
+import { Container, Heading, Button } from '@deskpro/react-components';
+import { Form, Input, Textarea } from '@deskpro/redux-components';
 
 /**
  * Renders the app's settings page.
@@ -20,7 +20,12 @@ class PageSettings extends React.PureComponent {
      * Instance of sdk storage.
      * @see https://deskpro.gitbooks.io/deskpro-apps/api/props/storage.html
      */
-    storage: PropTypes.object.isRequired
+    storage: PropTypes.object.isRequired,
+
+    /**
+     * Instance of sdk-core.
+     */
+    dpapp: PropTypes.object.isRequired
   };
 
   /**
@@ -51,9 +56,9 @@ class PageSettings extends React.PureComponent {
    * @returns {XML}
    */
   render() {
-    const { storage } = this.props;
+    const { storage, dpapp } = this.props;
 
-    if (storage.app.settings === undefined) {
+    if (!storage.app.settings) {
       storage.app.settings = {};
     }
     if (!storage.app.settings.title) {
