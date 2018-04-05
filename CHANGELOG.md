@@ -4,6 +4,10 @@ This project is following [Semantic Versioning](http://semver.org)
 
 ## [Unreleased][]
 
+### Changed
+    
+    - updates webpack configuration
+
 ## [0.2.3][] - 2018-04-05
 
 ### Added
