@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "dpat server .",
     "package": "dpat clean . && dpat compile . && dpat verify ./dist && dpat package .",
-    "test": "dpat test ."
+    "test": "dpat test .",
+    "version": "version-changelog CHANGELOG.md && changelog-verify CHANGELOG.md && git add CHANGELOG.md"
   },
   "repository": {
     "type": "git",
@@ -79,5 +80,9 @@
     "react-dom": "^15.6.1",
     "react-test-renderer": "^15.6.1",
     "url-loader": "^0.5.9"
+  },
+  "optionalDependencies": {
+    "changelog-verify": "^1.1.0",
+    "version-changelog": "^3.1.0"
   }
 }
