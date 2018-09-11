@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PageHome renders correctly in the normal state 1`] = `
+<div
+  className="dp-Content"
+>
+  <div
+    dangerouslySetInnerHTML={
+      Object {
+        "__html": "<h1>delectus aut autem</h1>
+      <p>Agent: [object Object]</p>
+      <p>UserId: 1</p>",
+      }
+    }
+  />
+</div>
+`;
