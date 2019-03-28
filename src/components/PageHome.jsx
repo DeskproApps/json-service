@@ -41,9 +41,15 @@ class PageHome extends React.Component
       const serviceTemp = Handlebars.compile(serviceURL);
       const fetchUrl = serviceTemp({...context});
 
+      const headers = {};
+
+      if (authorization) {
+        headers['x-proxy-header-authorization'] = authorization;
+      }
+
       const fetchParams = {
         method: 'GET',
-        headers: {}
+        headers
       };
       dpapp.restApi.fetchProxy(fetchUrl, fetchParams)
         .then(html)
