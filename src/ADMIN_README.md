@@ -28,16 +28,17 @@ The response, stored in the variable `resp`, is displayed using an admin created
 
 The `tab` data ([visit reference](https://github.com/DeskproApps/json-service/blob/master/docs/tabdata.md "Tab data reference - CTRL+click to open in new tab")) and
 `me` ([visit reference](https://github.com/DeskproApps/json-service/blob/master/docs/me.md "Me data reference - CTRL+click to open in new tab")) values may be rendered in the template
-using [Handlebars expressions](http://handlebarsjs.com/expressions.html "Handlebars expressions - CTRL+click to open in new tab").
+using [Handlebars expressions](http://handlebarsjs.com/expressions.html "Handlebars expressions - CTRL+click to open in new tab"). If you want to access `tab` or `me` from inside a `{{#each}}` block you'll have to prefix it with `../` to get the parent context [(See more)](http://handlebarsjs.com/#paths)
 
 
 ```
 {{#each resp}}
   <div class="entry">
     <h1>{{title}}</h1>
-    <p>{{tab.agent.name}}</p>
+    <p>{{../tab.agent.name}}</p>
   </div>
 {{/each}}
+{{ tab.id }}
 ```
 
 The example above uses [https://jsonplaceholder.typicode.com/todos/1](https://jsonplaceholder.typicode.com/todos/1) as the remote service
